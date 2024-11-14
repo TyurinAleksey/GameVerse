@@ -5,6 +5,7 @@ import { getApiResourse } from '@utils/api'
 import { withErrorApi } from '@hoc-helpers/withErrorApi'
 import { API_GAME_ID, MY_API_KEY } from '@constants/api';
 import {dateFormated} from '@services/dateFormated';
+import GameLinkBack from '@components/GameLinkBack';
 
 import styles from './Game.module.scss';
 
@@ -35,6 +36,7 @@ function Game({setErrorApi}) {
         <>
             {GameInfo && (
                 <div className={styles.container}>
+                    <GameLinkBack/>
                     <div className={styles.box}>
                         <div className={styles.image}>
                             <img className={styles.image__back} src={GameInfo.background_image_additional} alt="" />

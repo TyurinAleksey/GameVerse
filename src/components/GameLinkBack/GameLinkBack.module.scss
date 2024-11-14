@@ -1,0 +1,19 @@
+.link {
+    display: inline-flex;
+    align-items: center;
+    font-size: var(--font-size-back);
+    color: var(--color-text-main);
+    &__img {
+        object-fit: cover;
+        object-position: center;
+        width: var(--width-img-1x1);
+        height: var(--width-img-1x1);
+    }
+    &__text {
+        margin-left: var(--margin-min);
+        transition: var(--transition-main);
+        &:hover {
+            margin-left: var(--margin-average);
+        }
+    }
+}
