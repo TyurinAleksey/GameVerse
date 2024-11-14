@@ -1,0 +1,20 @@
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    &__img {
+        width: var(--width-item);
+        height: 280px;
+        object-fit: cover;
+    }
+    &__title {
+        font-size: 18px;
+    }
+    &__item {
+        width: var(--width-item);
+    }
+    &__item  :global(a){
+        text-align: center;
+        color: var(--color-text-main);
+    }
+}

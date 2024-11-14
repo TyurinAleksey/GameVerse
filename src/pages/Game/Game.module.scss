@@ -1,0 +1,73 @@
+.image {
+    object-fit: cover;
+    object-position: center;
+    &__back {
+        width: var(--width-100pr);
+        height: 412px;
+        border-radius: 16px 16px 0 0;
+    }
+    &__name {
+        width: 250px;
+        height: 250px;
+        border-radius: var(--border-radius-average);
+    }
+}
+
+.box {
+    border-radius: var(--border-radius-average);
+    background: var(--color-3);
+}
+
+.game {
+    &__discription {
+        display: flex;
+        position: relative;
+    }
+    &__poster {
+        margin: -200px 20px 0;
+        flex-shrink: 0;
+        width: 260px;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        background: var(--color-3);
+        border-radius: var(--border-radius-average);
+    }
+    &__btn {
+        font-size: var(--font-size-16);
+    }
+    &__name {
+        font-size: var(--font-size-title);
+        font-weight: 500;
+        margin: 30px 0;
+    }
+    &__body {
+        padding: var(--padding-min);
+    }
+    &__text {
+        text-indent: var(--text-indent);
+        margin: 10px 0;
+    }
+    &__genres {
+        margin: 20px 0;
+        a {
+            padding: 5px 10px;
+            color: var(--color-text-main);
+            background: var(--color-5);
+            margin: 0 5px;
+            border: 1px solid var(--color-4);
+            border-radius: var(--border-radius-min);
+            transition: var(--transition-main);
+            &:hover {
+                border: 1.25px solid var(--color-gray);
+            }
+        }
+    }
+    &__info {
+        font-size: 18px;
+        span {
+            font-style: italic;
+            font-weight: 500;
+        }
+    }
+}

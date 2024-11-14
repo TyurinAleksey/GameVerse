@@ -1,0 +1,17 @@
+.button {
+    margin: 30px 0;
+    color: var(--color-4);
+    padding: 10px 25px;
+    background-color: var(--color-5);
+    border-radius: var(--border-radius-max);
+    box-shadow: var(--box-shadow-main);
+    transition: color var(--transition-main), box-swadow var(--transition-main);
+    &:hover {
+        color: var(--color-text-main);
+        box-shadow: var(--box-shadow-main-shadow);
+    }
+    &:disabled:hover {
+        color: var(--color-4);
+        box-shadow: var(--box-shadow-main);
+    }
+}
