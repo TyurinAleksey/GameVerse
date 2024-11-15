@@ -8,7 +8,7 @@
     }
     &__name {
         width: 250px;
-        height: 250px;
+        height: 200px;
         border-radius: var(--border-radius-average);
     }
 }
@@ -24,7 +24,7 @@
         position: relative;
     }
     &__poster {
-        margin: -200px 20px 0;
+        margin: -100px 20px 0;
         flex-shrink: 0;
         width: 260px;
         display: flex;
@@ -66,8 +66,20 @@
     &__info {
         font-size: 18px;
         span {
+            display: inline-block;
+            align-items: center;
             font-style: italic;
             font-weight: 500;
+            img {
+                width: 30px;
+                height: 30px;
+                object-fit: cover;
+                object-position: center;
+            }
         }
+    }
+    &__info_dop {
+        margin: 0 var(--margin-min);
+        text-decoration: underline;
     }
 }

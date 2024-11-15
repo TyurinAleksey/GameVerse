@@ -1,0 +1,33 @@
+.header {
+    display: flex;
+    width: 100%;
+    &__top {
+        width: 100%;
+        display: flex;
+        padding: 20px;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid var(--color-dark);
+        margin-bottom: 30px;
+    }
+    &__logo {
+        color: var(--color-text-main);
+        font-size: var(--font-size-logo);
+        font-family: var(--font-famaly-logo);
+        font-weight: 700;
+        text-shadow: var(--text-shadow-dark);
+    }
+    &__favorites {
+        width: var(--width-img-1x1);
+        &_box {
+            width: 40px;
+            height: 40px;
+            border-radius: var(--border-radius-max);
+            box-shadow: var(--box-shadow-main);
+            transition: var(--transition-main);
+            &:hover {
+                box-shadow: var(--box-shadow-main-shadow);
+            }
+        }
+    }
+}

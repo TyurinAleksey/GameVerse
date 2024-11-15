@@ -1,0 +1,15 @@
+.serch {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    color: var(--color-gray);
+    border-radius: var(--border-radius-max);
+    box-shadow: var(--box-shadow-main);
+    transition: var(--transition-main);
+    &:hover {
+        box-shadow: var(--box-shadow-main-shadow);
+    }
+    &__btn {
+        width: var(--width-img-1x1);
+    }
+}
