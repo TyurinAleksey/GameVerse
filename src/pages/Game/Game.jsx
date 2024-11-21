@@ -1,26 +1,34 @@
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
 import { getApiResourse } from '@utils/api'
 import { withErrorApi } from '@hoc-helpers/withErrorApi'
 import { API_GAME_ID, MY_API_KEY } from '@constants/api';
 import {dateFormated} from '@services/dateFormated';
+import { setGameToFavorite, removeGameFromFavorite } from '@store/actions'
 import GameLinkBack from '@components/GameLinkBack';
 import iconStar from './img/stars.png'
+import iconFavorite from './img/favorite.png'
 
 import styles from './Game.module.scss';
 
 function Game({setErrorApi}) {
+    const dispatch = useDispatch();
     const {id} = useParams()
+
+    const [favorites, setFavorites] = useState(false);
     const [GameInfo, setGameInfo] = useState(null);
-    const [minimum, setMinimum] = useState(null);
     const [genres, setGenres] = useState(null);
     const [date, setDate] = useState(null);
+
+    const storeData = useSelector(state => state.favoriteReducer)
 
     useEffect(() => {
         (async () => {
             const data = await getApiResourse(API_GAME_ID + `/${id}` + MY_API_KEY);
-            console.log(data)
+
+            storeData[id] ? setFavorites(true) : setFavorites(false);
 
             if (data) {
                 setGameInfo(data)
@@ -32,6 +40,21 @@ function Game({setErrorApi}) {
             }
         })();
     }, [])
+
+    const dispatchFavoriteGame = () => {
+        if (favorites) {
+            dispatch(removeGameFromFavorite(id));
+            setFavorites(false);
+        } else {
+            dispatch(setGameToFavorite({
+                [id]: {
+                    name: GameInfo.name,
+                    img: GameInfo.background_image
+                },
+            }));
+            setFavorites(true);
+        }
+    };
 
     return (
         <>
@@ -45,7 +68,7 @@ function Game({setErrorApi}) {
                         <div className={styles.game__discription}>
                             <div className={styles.game__poster}>
                                 <img className={styles.image__name} src={GameInfo.background_image} alt="" />
-                                <button className={styles.game__btn} >Добавить в подборку</button>
+                                <button className={styles.game__btn} onClick={dispatchFavoriteGame} ><span>{favorites ? "Удалить из подборки" : "Добавить в подборку"} <img src={iconFavorite} className={styles.game__btn_icon} /></span></button>
                             </div>
                             <div className={styles.game__body}>
                                 <h2 className={styles.game__name}>{GameInfo.name}</h2>

@@ -1,12 +1,18 @@
 import Home from "@pages/Home";
 import Game from "@pages/Game";
 import NotFound from "@pages/NotFound";
+import Favorites from "@pages/Favorites";
 
 const routesConfig = [
     {
         path: "/",
         exact: true,
         component: <Home/>
+    },
+    {
+        path: "/favorites",
+        exact: true,
+        component: <Favorites/>
     },
     {
         path: "/?page=1",

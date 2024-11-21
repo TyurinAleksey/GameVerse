@@ -14,6 +14,7 @@
 }
 
 .box {
+    padding-bottom: 30px;
     border-radius: var(--border-radius-average);
     background: var(--color-3);
 }
@@ -34,7 +35,18 @@
         border-radius: var(--border-radius-average);
     }
     &__btn {
-        font-size: var(--font-size-16);
+        font-weight: var(--font-weight-500);
+        font-size: var(--font-size-average);
+        margin-top: var(--margin-average);
+        text-shadow: var(--text-shadow-dark-2);
+        transition: var(--transition-main);
+        &:hover {
+            text-shadow: var(--text-shadow-dark);
+        }
+    }
+    &__btn_icon {
+        width: var(--width-img-1x1-max);
+        height: var(--width-img-1x1-max);
     }
     &__name {
         font-size: var(--font-size-title);

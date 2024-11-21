@@ -102,9 +102,11 @@ legend {
 	--font-famaly-logo: "Cinzel", serif;
 	--font-family-main: "Poppins", sans-serif;
 	--font-size-16: 16px;
+	--font-size-average: 18px;
 	--font-size-back: 20px;
 	--font-size-title: 30px;
 	--font-size-logo: 35px;
+	--font-weight-500: 500;
 
 	--border-radius-max: 50px;
 	--border-radius-average: 30px;
@@ -121,6 +123,7 @@ legend {
 	--width-max: 1085px;
 	--width-item: 250px;
 	--width-img-1x1: 20px;
+	--width-img-1x1-max: 30px;
 
 	--text-shadow: 0px 0px 5px rgba(255, 255, 255, 1), 
 		0px 0px 10px rgba(255, 255, 255, 1), 
@@ -134,6 +137,15 @@ legend {
 	--text-shadow-dark: 0px 0px 5px rgba(255, 255, 255, 1), 
 		0px 0px 10px rgba(255, 255, 255, 1), 
 		0px 0px 15px rgba(255, 255, 255, 1),
+		0px 0px 20px rgba(34, 60, 80, 0.6),
+		0px 0px 30px rgba(34, 60, 80, 0.6),
+		0px 0px 40px rgba(34, 60, 80, 0.6),
+		0px 0px 55px rgba(34, 60, 80, 0.6),
+		0px 0px 75px rgba(34, 60, 80, 0.6);
+
+	--text-shadow-dark-2: 0px 0px 5px rgba(255, 255, 255, 1), 
+		0px 0px 10px rgba(34, 60, 80, 0.6), 
+		0px 0px 15px rgba(34, 60, 80, 0.6),
 		0px 0px 20px rgba(34, 60, 80, 0.6),
 		0px 0px 30px rgba(34, 60, 80, 0.6),
 		0px 0px 40px rgba(34, 60, 80, 0.6),

@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom';
 
 import FavoritesIcon from './img/Favorites.svg';
@@ -13,16 +12,12 @@ function Header() {
       <div className={styles.header__top}>
         <Link to="/" className={styles.header__logo}>GameVerse</Link>
         <Serch />
-        <button className={styles.header__favorites_box}><img src={FavoritesIcon} alt="Favorites" className={styles.header__favorites}/></button>
+        <Link to="/favorites" className={styles.header__favorites_box}><img src={FavoritesIcon} alt="Favorites" className={styles.header__favorites}/></Link>
       </div>
       <div className={styles.header__bottom}></div>
     </div>
     </>
   )
 }
-
-Header.propTypes = {
-  // test: PropTypes.string
-};
 
 export default Header;

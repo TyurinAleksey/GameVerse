@@ -1,7 +1,6 @@
 import { Route, Routes, Switch } from "react-router";
 import routesConfig from "@routes/routesConfig.js"
 
-import Footer from "@components/Footer"
 import Header from "@components/Header";
 
 function App() {
@@ -18,7 +17,6 @@ function App() {
                 />
             ))}
         </Routes>
-        <Footer/>
     </div>
   );
 }

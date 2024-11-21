@@ -20,6 +20,9 @@
     &__favorites {
         width: var(--width-img-1x1);
         &_box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             width: 40px;
             height: 40px;
             border-radius: var(--border-radius-max);
