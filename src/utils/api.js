@@ -13,8 +13,3 @@ export async function getApiResourse(url) {
         return false
     }
 }
-
-// (async () => {
-//     const data = await getApiResourse(BODY_URL_API+SERCH_API_GAMES+MY_API_KEY);
-//     console.log(data)
-// })();

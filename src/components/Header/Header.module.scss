@@ -17,14 +17,20 @@
         font-weight: 700;
         text-shadow: var(--text-shadow-dark);
     }
+    &__right {
+        display: flex;
+        flex-wrap: wrap;
+    }
     &__favorites {
         width: var(--width-img-1x1);
         &_box {
+            position: relative;
             display: flex;
             justify-content: center;
             align-items: center;
             width: 40px;
             height: 40px;
+            margin: var(--margin-min);
             border-radius: var(--border-radius-max);
             box-shadow: var(--box-shadow-main);
             transition: var(--transition-main);

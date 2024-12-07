@@ -1,12 +1,12 @@
 .serch {
     display: inline-flex;
     align-items: center;
-    padding: 10px 20px;
+    padding: 10px 10px;
     color: var(--color-gray);
     border-radius: var(--border-radius-max);
     box-shadow: var(--box-shadow-main);
     transition: var(--transition-main);
-    &:hover {
+    &:hover, &:focus-within {
         box-shadow: var(--box-shadow-main-shadow);
     }
     &__btn {
