@@ -2,6 +2,7 @@ import Home from "@pages/Home";
 import Game from "@pages/Game";
 import NotFound from "@pages/NotFound";
 import Favorites from "@pages/Favorites";
+import Search from "@pages/Search";
 
 const routesConfig = [
     {
@@ -13,6 +14,11 @@ const routesConfig = [
         path: "/favorites",
         exact: true,
         component: <Favorites/>
+    },
+    {
+        path: "/serch",
+        exact: true,
+        component: <Search/>
     },
     {
         path: "/?page=1",
